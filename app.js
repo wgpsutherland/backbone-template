@@ -68,7 +68,7 @@ app.delete('/users/:id', deleteUser);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-var port = Number(process.env.PORT || 5000);
+var port = Number(process.env.PORT || 5000); // allows for use on the local server and with heroku without changing configs
 app.listen(port, function() {
 	console.log("I'm alive on port " + port + "!");
 });
