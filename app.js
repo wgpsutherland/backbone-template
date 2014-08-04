@@ -4,8 +4,6 @@ var express = require('express');
 var logfmt = require("logfmt");
 var bodyParser = require('body-parser');
 
-app.use(logfmt.requestLogger());
-
 var idCount = 1;
 
 var userList = [{
@@ -16,6 +14,7 @@ var userList = [{
 }];
 
 var app = express();
+app.use(logfmt.requestLogger());
 app.use(bodyParser());
 
 // returns the list of users
