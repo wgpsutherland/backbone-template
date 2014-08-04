@@ -1,7 +1,10 @@
 var _ = require('underscore');
 var path = require('path');
 var express = require('express');
+var logfmt = require("logfmt");
 var bodyParser = require('body-parser');
+
+app.use(logfmt.requestLogger());
 
 var idCount = 1;
 
@@ -66,6 +69,7 @@ app.delete('/users/:id', deleteUser);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(8080, function() {
-	console.log("I'm alive on port "+8080+"!");
+var port = Number(process.env.PORT || 5000);
+app.listen(port, function() {
+	console.log("I'm alive on port " + port + "!");
 });
