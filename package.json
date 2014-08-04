@@ -2,7 +2,7 @@
   "name": "Instagram",
   "version": "0.0.0",
   "description": "An desktop app for Instagram",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +21,8 @@
   "homepage": "https://github.com/wgpsutherland/Instagram",
   "dependencies": {
     "express": "^4.7.2",
-    "logfmt": "^1.1.2"
+    "logfmt": "^1.1.2",
+    "underscore": "1.6.*",
+    "body-parser": "1.5.2"
   }
 }
