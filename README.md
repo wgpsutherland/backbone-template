@@ -1,4 +1,4 @@
-Instagram
+users
 =========
 
-An app for use with Instagram
+An application to store users that can be used as a template for Backbone.
